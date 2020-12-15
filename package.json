@@ -1,0 +1,24 @@
+{
+  "name": "testimonial-grid-section",
+  "version": "1.0.0",
+  "description": "solution for the Testimonial grid section challenge at frontend mentor",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/testimonial.scss:./css/testimonial.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdhaisne/testimonial-grid-section.git"
+  },
+  "keywords": [
+    "frontend",
+    "mentor",
+    "challenge"
+  ],
+  "author": "Dhaisne Julien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdhaisne/testimonial-grid-section/issues"
+  },
+  "homepage": "https://github.com/jdhaisne/testimonial-grid-section#readme"
+}

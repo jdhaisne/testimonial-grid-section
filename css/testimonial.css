@@ -1,0 +1,107 @@
+html, body {
+  background-color: #ecf2f8;
+  padding: 0;
+  margin: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+.main-container {
+  margin: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 25px;
+  justify-content: center;
+  grid-template-areas: "card1 card1 card2 card5" "card3 card4 card4 card5";
+}
+@media (max-width: 1100px) {
+  .main-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "card1 card1 card2" "card3 card4 card4" " card5 card5 card5";
+  }
+}
+@media (max-width: 700px) {
+  .main-container {
+    display: block;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  color: #48556a;
+}
+.card div {
+  margin: 10px;
+}
+.card--card1 {
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 70px;
+  background-color: #7541c8;
+  grid-area: card1;
+}
+.card--card2 {
+  background-color: #48556a;
+  grid-area: card2;
+}
+.card--card3 {
+  grid-area: card3;
+}
+.card--card4 {
+  background-color: #19212e;
+  grid-area: card4;
+}
+.card--card5 {
+  grid-area: card5;
+}
+.card--gray-text {
+  color: white;
+}
+@media (max-width: 700px) {
+  .card {
+    margin: 15px;
+  }
+}
+.card__user img {
+  float: left;
+  border-radius: 50%;
+  width: 30px;
+  margin-right: 20px;
+}
+.card__user--purple-border img {
+  border: 2px solid #7541c8;
+}
+.card__user--light-purple-border img {
+  border: 2px solid #a775f1;
+}
+.card__feedback {
+  font-size: 1.7em;
+}
+.card__quote {
+  color: #48556a;
+  opacity: 70%;
+}
+.card__quote--dark {
+  color: #cfcfcf;
+  opacity: 70%;
+}
+
+.user {
+  color: #48556a;
+}
+.user__name {
+  display: block;
+}
+.user__graduate {
+  display: block;
+  opacity: 50%;
+}
+.user--dark {
+  color: #cfcfcf;
+}
+
+/*# sourceMappingURL=testimonial.css.map */

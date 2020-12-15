@@ -1,0 +1,118 @@
+$moderate-violet: hsl(263, 55%, 52%);
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+html, body {
+    background-color: $light-grayish-blue;
+    padding: 0;
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+.main-container {
+    margin: 10%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+    justify-content: center;
+    grid-template-areas: 
+    "card1 card1 card2 card5"
+    "card3 card4 card4 card5";
+    @media (max-width: 1100px) {
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+    "card1 card1 card2"
+    "card3 card4 card4"
+    " card5 card5 card5";
+    }
+    @media (max-width: 700px) {
+        display: block;
+    }
+}
+
+.card {
+    background-color: $white;
+    border-radius: 10px;
+    padding: 30px;
+    color: $very-dark-grayish-blue;
+    div {
+        margin: 10px;
+    }
+    &--card1 {
+        background-image: url("../images/bg-pattern-quotation.svg");
+        background-repeat: no-repeat;
+        background-position: top right 70px;
+        background-color: $moderate-violet;
+        grid-area: card1;
+    }
+    &--card2 {
+        background-color: $very-dark-grayish-blue;
+        grid-area: card2;
+    }
+    &--card3 {
+        grid-area: card3;
+    }
+    &--card4 {
+        background-color: $very-dark-blackish-blue;
+        grid-area: card4;
+    }
+    &--card5 {
+        grid-area: card5;
+    }
+    &--gray-text {
+        color: $white;
+    }
+    @media (max-width: 700px) {
+        margin: 15px;
+    }
+    &__user {
+        img {
+            float: left;
+            border-radius: 50%;
+            width: 30px;
+            margin-right: 20px;
+        }
+        &--purple-border {
+            img {
+                border: 2px solid $moderate-violet;
+            }
+        }
+        &--light-purple-border {
+            img {
+                border: 2px solid #a775f1;
+            }
+        }      
+    }
+    &__feedback {
+        font-size: 1.7em;
+    }
+    &__quote {
+        color: $very-dark-grayish-blue;
+        opacity: 70%;
+        &--dark {
+            color: $light-gray;
+            opacity: 70%; 
+        }
+    }
+}
+
+.user {
+    color: $very-dark-grayish-blue;
+    &__name {
+        display: block;
+    }
+    &__graduate {
+        display: block;
+        opacity: 50%;
+    }
+    &--dark {
+        color: $light-gray;
+    }
+}
